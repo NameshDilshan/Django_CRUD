@@ -1,0 +1,21 @@
+<table class="table table-hover ">
+    <thead>
+    <tr>
+        <th class="success">Firstname</th>
+        <th class="success">Lastname</th>
+        <th class="success">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for member in members %}
+    <tr>
+        <td>{{ member.firstName }}</td>
+        <td>{{ member.lastName }}</td>
+        <td>
+            <a name="{{ member.id }}" class="btn btn-warning edit">Edit</a>
+            <a name="{{ member.id }}" class="btn btn-danger delete">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
